@@ -25,3 +25,26 @@ print(z)
 a = 11
 p = z + a
 print(p)
+
+#Direccion de memoria
+print(id(x))
+print(id(y))
+print(id(z))
+
+#Tipos de datos
+#Numerico
+q = 10
+print(q)
+print(type(x))
+#String
+w = "Hola Mundo"
+print(w)
+print(type(w))
+#Flotante
+e = 10.5
+print(e)
+print(type(e))
+#Boleano
+r = True
+print(r)
+print(type(r))
