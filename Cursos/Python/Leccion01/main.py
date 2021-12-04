@@ -116,3 +116,16 @@ numeroDos = int(input("Escribe un segundo numero: "))
 validar = numeroUno + numeroDos
 #si el print lo escribes con "+" chocara porque el + intenta concatenar el string con el numero
 print("El resultado es: ", validar)
+
+#Actividad preguntarle al usuario como estuvo su dia del 1 al 10 e imprimirlo
+validarDia = int(input("Hola, Como estuvo tu dia? (1 al 10): "))
+print("Mi dia estuvo de: ", validarDia)
+
+#Actividad 2 imprimir "Titulo" fue escrito por "Autor"
+tituloLibro = input("Proporciona el titulo: ")
+autorLibro = input("Proporciona el autor: ")
+print(tituloLibro + " Fue escrito por " + autorLibro)
+
+# Operadores Aritmeticos
+# Suma +, Resta -, Multiplicacion *, Division /, Division entero //, Exponente **, Residuo %
+
