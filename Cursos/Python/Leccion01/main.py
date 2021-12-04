@@ -48,3 +48,9 @@ print(type(e))
 r = True
 print(r)
 print(type(r))
+
+#ManejoDeCadenas
+miGrupoFavorito = "Bullet for my valentine"
+print("Mi grupo Favorito es: " + miGrupoFavorito)
+miSegundoGrupoFavoriorito = "Metallica"
+print("Mis Bandas Favoritas son: " + miGrupoFavorito + " y " +miSegundoGrupoFavoriorito)
