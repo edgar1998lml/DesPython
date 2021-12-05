@@ -52,3 +52,14 @@ print(mivariableDeAsignacion)
 
 #Operadores de comparacion
 
+a = 4
+b = 2
+resul = a == b
+print(resul)
+resul = a != b
+print(resul)
+
+resul = a < b
+print(resul)
+resul = a > b
+print(resul)
