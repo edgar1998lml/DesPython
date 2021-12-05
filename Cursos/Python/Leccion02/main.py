@@ -63,3 +63,7 @@ resul = a < b
 print(resul)
 resul = a > b
 print(resul)
+resul = a >= b
+print(resul)
+resul = a <= b
+print(resul)
