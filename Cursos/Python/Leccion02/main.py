@@ -2,7 +2,7 @@ operandoA = 3
 operandoB = 2
 suma = operandoA + operandoB
 print('Resultado suma: ', suma)
-#interpolacion
+# interpolacion
 print(f'Resultado suma: {suma}')
 
 resta = operandoA - operandoB
@@ -39,10 +39,10 @@ print(miVariableDeAsignacion)
 mivariableDeAsignacion = miVariableDeAsignacion + 1
 print(mivariableDeAsignacion)
 
-#incremento con asignacion
+# incremento con asignacion
 mivariableDeAsignacion += 2
 print(mivariableDeAsignacion)
-#ahora con los demas signos aritmeticos
+# ahora con los demas signos aritmeticos
 mivariableDeAsignacion -= 3
 print(mivariableDeAsignacion)
 mivariableDeAsignacion *= 3
@@ -50,7 +50,7 @@ print(mivariableDeAsignacion)
 mivariableDeAsignacion /= 2
 print(mivariableDeAsignacion)
 
-#Operadores de comparacion
+# Operadores de comparacion
 
 a = 4
 b = 2
@@ -67,3 +67,47 @@ resul = a >= b
 print(resul)
 resul = a <= b
 print(resul)
+
+# Numeros pares o no
+
+a = int(input('Escribe un valor numerico: '))
+if a % 2 == 0:
+    print(f'El vador de a {a} es numero par')
+else:
+    print(f'El valor de a {a} es un numero impar')
+
+# Ejercicio Edad
+edadAdulto = 18
+edad = int(input('Escribe tu edad:'))
+if edad >= edadAdulto:
+    print(f'Tu edad es {edad} eres mayor de edad')
+else:
+    print(f'Tu edad es {edad} eres menor de edad')
+
+#Operadores logicos "and,or,not)
+
+atrue = True
+btrue = False
+
+resultadotrue = atrue and btrue
+print(resultadotrue)
+
+resultadotrue = atrue or btrue
+print(resultadotrue)
+
+resultadotrue = not atrue
+print(resultadotrue)
+
+resultadotrue = not btrue
+print(resultadotrue)
+
+#Actividad Rango
+valorRango = int(input('Escribe un valor: '))
+valorMinimo = 0
+valorMaximo = 10
+dentroRango = (valorRango >= valorMinimo) and (valorRango <= valorMaximo)
+
+if dentroRango:
+    print(f'Tu valor {valorRango} esta dentro del rango')
+else:
+    print(f'Tu valor {valorRango} esta fuera del rango')
