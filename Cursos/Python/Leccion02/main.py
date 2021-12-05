@@ -84,7 +84,7 @@ if edad >= edadAdulto:
 else:
     print(f'Tu edad es {edad} eres menor de edad')
 
-#Operadores logicos "and,or,not)
+# Operadores logicos "and,or,not)
 
 atrue = True
 btrue = False
@@ -101,7 +101,7 @@ print(resultadotrue)
 resultadotrue = not btrue
 print(resultadotrue)
 
-#Actividad Rango
+# Actividad Rango
 valorRango = int(input('Escribe un valor: '))
 valorMinimo = 0
 valorMaximo = 10
@@ -111,3 +111,36 @@ if dentroRango:
     print(f'Tu valor {valorRango} esta dentro del rango')
 else:
     print(f'Tu valor {valorRango} esta fuera del rango')
+
+# Actividad vacaciones
+
+vacaciones = False
+diaDescanso = False
+
+if vacaciones or diaDescanso:
+    print('Puede asistir al juego')
+else:
+    print('Tiene deberes por hacer')
+
+# utilizando el not
+
+vacaciones = False
+diaDescanso = True
+
+if not (vacaciones or diaDescanso):
+    print('Tiene deberes')
+else:
+    print('Puede ir al juego')
+
+# Actividad entre los 20 y 30
+edadActual = int(input('Introduce tu edad: '))
+
+veintes = edadActual >= 20 and edadActual < 30
+print(veintes)
+treintas = edadActual > 20 and edadActual < 40
+print(treintas)
+
+if veintes or treintas:
+    print('Dentro de rango 20\'s o 30\'s')
+else:
+    print("Fuera de rango 20's o 30's")
