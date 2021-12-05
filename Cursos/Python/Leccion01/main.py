@@ -99,33 +99,32 @@ print("Tu resultado es:")
 print(resultado)
 print("Fin del input")
 
-#Funcion mas corta y mas practica
+# Funcion mas corta y mas practica
 resultado = input("Escribe un mensaje: ")
 print(resultado)
 print("Fin del programa")
 
-#Mas funciones input (por defecto el input regresa valores cadena)
+# Mas funciones input (por defecto el input regresa valores cadena)
 numeroUno = input("Escribe un el primer numero: ")
 numeroDos = input("Escribe un segundo numero: ")
 validar = numeroUno + numeroDos
 print("El resultado es: " + validar)
 
-#Como hacer que sea entero
+# Como hacer que sea entero
 numeroUno = int(input("Escribe un el primer numero: "))
 numeroDos = int(input("Escribe un segundo numero: "))
 validar = numeroUno + numeroDos
-#si el print lo escribes con "+" chocara porque el + intenta concatenar el string con el numero
+# si el print lo escribes con "+" chocara porque el + intenta concatenar el string con el numero
 print("El resultado es: ", validar)
 
-#Actividad preguntarle al usuario como estuvo su dia del 1 al 10 e imprimirlo
+# Actividad preguntarle al usuario como estuvo su dia del 1 al 10 e imprimirlo
 validarDia = int(input("Hola, Como estuvo tu dia? (1 al 10): "))
 print("Mi dia estuvo de: ", validarDia)
 
-#Actividad 2 imprimir "Titulo" fue escrito por "Autor"
+# Actividad 2 imprimir "Titulo" fue escrito por "Autor"
 tituloLibro = input("Proporciona el titulo: ")
 autorLibro = input("Proporciona el autor: ")
 print(tituloLibro + " Fue escrito por " + autorLibro)
 
 # Operadores Aritmeticos
 # Suma +, Resta -, Multiplicacion *, Division /, Division entero //, Exponente **, Residuo %
-
