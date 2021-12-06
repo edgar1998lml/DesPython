@@ -144,3 +144,35 @@ if veintes or treintas:
     print('Dentro de rango 20\'s o 30\'s')
 else:
     print("Fuera de rango 20's o 30's")
+
+#Actividad Tarea numero mayor
+
+comparacionNum1 = int(input('Ingresa el primer Numero: '))
+comparacionNum2 = int(input('Ingrese el segundo Numero: '))
+
+if comparacionNum1 > comparacionNum2:
+    print("Numero 1 es mayor")
+else:
+    print("Numero 2 es mayor")
+
+#Actividad libreria
+
+print('Proporciona los siguientes datos del libro')
+nombre = input('Proporciona el nombre del libro: ')
+id = int(input('Proporciona el ID del usuario: '))
+precio = float(input('Proporciona el valor del libro: '))
+envioGratuito = input('Indica si es envio gratuito (True/False)')
+
+if envioGratuito == 'True':
+    envioGratuito = True
+elif envioGratuito == 'False':
+    envioGratuito = False
+else:
+    envioGratuito = 'Valor incorrecto, debe escribir True o False'
+
+print(f'''
+    Nombre: {nombre}
+    Id: {id}
+    Precio: {precio}
+    Envio Gratuito?: {envioGratuito}
+''')
