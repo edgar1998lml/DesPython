@@ -1,6 +1,7 @@
 from types import MethodType
 from flask import Flask, render_template
 from flask_mysqldb import MySQL
+from flask import request
 
 app = Flask(__name__)
 app.config['MySQL_HOST'] = 'localhost'
@@ -13,12 +14,16 @@ mysql = MySQL(app)
 def Index():
     return render_template('index.html')
 
-@app.route('/add_contact', method=['POST'])
+@app.route('/add_contact', methods=['POST'])
 def add_contact():
     if request.method == 'POST':
         fullname = request.form['fullname']
-
-
+        phone = request.form['phone']
+        email = request.form['email']
+        print(fullname)
+        print(phone)
+        print(email)
+        return 'received'
 @app.route('/edit')
 def edit_contact():
     return 'Edit contact'
