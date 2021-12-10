@@ -19,7 +19,7 @@ app.config['MYSQL_DB'] = 'flaskcontacts'
 mysql = MySQL(app)
 
 #Settings
-#app.secret_key = ''
+app.secret_key = 'Mi Clave Super Mega Segura'.encode('utf-8')
 
 @app.route('/')
 def Index():
