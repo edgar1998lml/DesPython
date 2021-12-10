@@ -6,15 +6,20 @@ from flask import request, redirect, url_for, flash
 
 app = Flask(__name__)
 
-#mysqlConnection
-app.config['MYSQL_HOST'] = 'localhost'
+#mysqlConnection linux
+app.config['MYSQL_HOST'] = '127.0.0.1'
+#mySqlConnectio Windows 10
+#app.config['MYSQL_HOST'] = 'Localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'password'
+#Esta es para la db de linux
+app.config['MYSQL_PASSWORD'] = '--A]NGcKf/3](T2M'
+#Esta es para la db de windows10
+#app.config['MYSQL_PASSWORD'] = 'password'
 app.config['MYSQL_DB'] = 'flaskcontacts'
 mysql = MySQL(app)
 
 #Settings
-app.secret_key = ''
+#app.secret_key = ''
 
 @app.route('/')
 def Index():
@@ -31,7 +36,7 @@ def add_contact():
         mysql.connection.commit()
         flash('Contact Added Successfully')
         #print(name)
-        #print(phone)
+        #print(phone)A
         #print(email)
         #return 'received'
         return redirect(url_for('Index'))
