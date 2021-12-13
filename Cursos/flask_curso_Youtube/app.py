@@ -7,14 +7,14 @@ from flask import request, redirect, url_for, flash
 app = Flask(__name__)
 
 #mysqlConnection linux
-#app.config['MYSQL_HOST'] = '127.0.0.1'
+app.config['MYSQL_HOST'] = '127.0.0.1'
 #mySqlConnectio Windows 10
-app.config['MYSQL_HOST'] = 'localhost'
+#app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 #Esta es para la db de linux
-#app.config['MYSQL_PASSWORD'] = '--A]NGcKf/3](T2M'
+app.config['MYSQL_PASSWORD'] = '--A]NGcKf/3](T2M'
 #Esta es para la db de windows10
-app.config['MYSQL_PASSWORD'] = 'password'
+#app.config['MYSQL_PASSWORD'] = 'password'
 app.config['MYSQL_DB'] = 'flaskcontacts'
 mysql = MySQL(app)
 
@@ -44,9 +44,33 @@ def add_contact():
         #print(email)
         #return 'received'
         return redirect(url_for('Index'))
-@app.route('/edit')
-def edit_contact():
-    return 'Edit contact'
+@app.route('/edit/<id>')
+def get_contact(id):
+    #return 'Edit contact'
+    cur = mysql.connection.cursor()
+    cur.execute('SELECT * FROM contacts WHERE ID = %s', (id))
+    data = cur.fetchall()
+    #print(data[0])
+    #return 'Recivied'
+    return render_template('edit-contacts.html', contact = data[0])
+
+@app.route('/update/<id>', methods = ['POST'])
+def update_contact(id):
+    if request.method == 'POST':
+        name = request.form['name']
+        phone = request.form['phone']
+        email = request.form['email']
+        cur = mysql.connection.cursor()
+        cur.execute("""
+            UPDATE contacts
+            SET name = %s,
+                phone = %s,
+                email = %s
+            WHERE id = %s
+        """, (name, phone, email, id))
+        mysql.connection.commit()
+        flash('Contact Updated Successfullty')
+        return redirect(url_for('Index'))
 
 @app.route('/delete/<string:id>')
 def delete_contact(id):
